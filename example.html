@@ -1,0 +1,136 @@
+<html>
+
+<body>
+
+<div id='container1'></div>
+<div id='container2'></div>
+<div id='container3'></div>
+<div id='container4'></div>
+<div id='container5'></div>
+<div id='container6'></div>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src='jsontohighchart.js'></script>
+<script>
+    
+$('#container1').drawchart({
+		URL: 'testserver.php', // server that return JSON
+		
+		category: 'category',  //category variable (x axis label), use date field name for time series 
+		seriesname: 'product', //series name variable
+		variable: 'revenue',  //data variable 
+		label: 'Revenue ($)', //label for variable　(optional)
+		
+		stack: 'normal',  //'normal', 'percent' or  null
+		type: 'column',
+		title: 'column chart by category', 
+		decimal : 0,   // decimal point
+		
+		datatable: 'yes',  // to display data table	below the chart
+		HCoptions: {
+			//Highcharts Options here
+			xAxis: {
+				labels: {
+					rotation: 90,
+					y: 20
+				}
+			}
+		}
+});
+
+$('#container2').drawchart({
+		URL: 'testserver.php', // server that return JSON
+		
+		category: 'date',  //category variable (x axis label), use date field name for time series 
+		seriesname: 'product', //series name variable
+		variable: ['quantity','revenue'],  //data variable 
+		label: ['Sold Qty','Revenue($)'],
+
+		stack: 'normal',  //'normal', 'percent' or  null
+		type: ['column', 'line'],
+		title: 'time series', 
+		decimal : 0,   // decimal point
+		
+		ymin: [0,50],  //starting point for 1st and 2nd Y axis
+		
+		xaxistype: 'datetime',  //datetime, category
+		interval: 'daily',   //for time series chart
+		mindate: '2013-10-20', //yyyy-mm-dd
+		maxdate: '2013-10-25',
+		
+		
+});
+
+
+$('#container3').drawchart({
+		URL: 'testserver.php', // server that return JSON
+		
+		category: 'category',  //category variable (x axis label), use date field name for time series 
+		variable: 'revenue',  //data variable 
+		
+		type: 'pie',
+		title: 'pie chart', 
+		decimal : 0,   // decimal point
+		
+		
+		HCoptions: {
+			//Highcharts Options here
+			legend: {
+				maxHeight: '200'
+				}
+			
+		}
+});
+
+
+$('#container4').drawchart({
+		URL: 'testserver.php', // server that return JSON
+		
+		category: 'product',  //category variable (x axis label), use date field name for time series 
+		variable: ['quantity', 'revenue'],  //data variable ,  x, y
+		label: ['Sold Qty','Revenue($)'],
+		
+		type: 'scatter',
+		title: 'scatter chart', 
+		decimal :  0,  // decimal point
+		
+		ymin: 0,  //min for first variable
+		  // to display data table
+		
+});
+
+
+$('#container5').drawchart({
+		URL: 'testserver.php', // server that return JSON
+		
+		category: 'product',  //category variable (x axis label)
+		variable: ['quantity', 'revenue', 'customer'],  //data variable  x, y, z
+		
+		type: 'scatter',
+		title: 'Scatter bubble chart', 
+		decimal :  0  
+		
+});
+
+
+
+$('#container6').drawchart({
+		URL: 'testserver.php', // server that return JSON
+		
+		category: 'product',  //category variable (x axis label)
+		variable: ['quantity', 'revenue', 'customer'],  //data variable  x, y, z
+		
+		type: 'bubble',
+		title: 'bubble chart', 
+		decimal :  0, // decimal point
+		ymin: [0,0],
+		datatable: 'yes'  // to display data table
+		
+});
+
+</script>
+</html>
