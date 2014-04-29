@@ -58,8 +58,19 @@ echo json_encode($dataArray);
 
 USAGE EXAMPLES:
 =================================================
-```javascript
+```<html>
 
+<body>
+
+TEST
+<div id='container1'></div>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src='jsontohighchart.js'></script>
+<script>
+    
 $('#container1').drawchart({
 		URL: 'testserver.php', // server that return JSON
 		
@@ -85,6 +96,8 @@ $('#container1').drawchart({
 	
 		}
 });
+</script>
+</html>
 ```
 
 $('#container1').drawchart({
