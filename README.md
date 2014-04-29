@@ -10,46 +10,32 @@ Server side codes querying data from a database often return data in an associat
 //testserver.php
 //example for associative array 
 $dataArray=array( 
-					array('month'=>'Jan', 'city'=>'Tokyo', 'temperature'=>7.0),
-		  			array('month'=>'Feb', 'city'=>'Tokyo', 'temperature'=>6.9),
-		  			array('month'=>'Mar', 'city'=>'Tokyo', 'temperature'=>9.5),
-		  			array('month'=>'Apr', 'city'=>'Tokyo', 'temperature'=>14.5),
-		  			array('month'=>'May', 'city'=>'Tokyo', 'temperature'=>18.2),
-		  			array('month'=>'Jun', 'city'=>'Tokyo', 'temperature'=>21.5),
-		  			array('month'=>'Jul', 'city'=>'Tokyo', 'temperature'=>25.2),
-		  			array('month'=>'Aug', 'city'=>'Tokyo', 'temperature'=>26.5),
-		  			array('month'=>'Sep', 'city'=>'Tokyo', 'temperature'=>23.3),
-		  			array('month'=>'Oct', 'city'=>'Tokyo', 'temperature'=>18.3),
-		  			array('month'=>'Nov', 'city'=>'Tokyo', 'temperature'=>13.9),
-		  			array('month'=>'Dec', 'city'=>'Tokyo', 'temperature'=>9.6),
+					array('date'=>'2013-10-20', 'product'=>'Spam', 'category'=>'canned food', 'customer'=>3, 'quantity'=>10, 'revenue'=>100),
+		  			array('date'=>'2013-10-21', 'product'=>'Spam', 'category'=>'canned food', 'customer'=>5, 'quantity'=>20, 'revenue'=>180),
+		  			array('date'=>'2013-10-22', 'product'=>'Spam', 'category'=>'canned food', 'customer'=>2, 'quantity'=>15, 'revenue'=>160),
+		  			array('date'=>'2013-10-23', 'product'=>'Spam', 'category'=>'canned food', 'customer'=>5, 'quantity'=>18, 'revenue'=>180),
+		  			array('date'=>'2013-10-24', 'product'=>'Spam', 'category'=>'canned food', 'customer'=>7, 'quantity'=>25, 'revenue'=>250),
+		  			array('date'=>'2013-10-25', 'product'=>'Spam', 'category'=>'canned food', 'customer'=>4, 'quantity'=>22, 'revenue'=>210),
 		  			
-		  			array('month'=>'Jan', 'city'=>'New York', 'temperature'=>-0.2),
-		  			array('month'=>'Feb', 'city'=>'New York', 'temperature'=>0.8),
-		  			array('month'=>'Mar', 'city'=>'New York', 'temperature'=>5.7),
-		  			array('month'=>'Apr', 'city'=>'New York', 'temperature'=>11.3),
-		  			array('month'=>'May', 'city'=>'New York', 'temperature'=>17.0),
-		  			array('month'=>'Jun', 'city'=>'New York', 'temperature'=>22.0),
-		  			array('month'=>'Jul', 'city'=>'New York', 'temperature'=>24.8),
-		  			array('month'=>'Aug', 'city'=>'New York', 'temperature'=>24.1),
-		  			array('month'=>'Sep', 'city'=>'New York', 'temperature'=>20.1),
-		  			array('month'=>'Oct', 'city'=>'New York', 'temperature'=>14.1),
-		  			array('month'=>'Nov', 'city'=>'New York', 'temperature'=>8.6),
-		  			array('month'=>'Dec', 'city'=>'New York', 'temperature'=>2.5),
+		  			array('date'=>'2013-10-20', 'product'=>'Bacon', 'category'=>'delicatessen', 'customer'=>6, 'quantity'=>13, 'revenue'=>70),
+		  			array('date'=>'2013-10-21', 'product'=>'Bacon', 'category'=>'delicatessen', 'customer'=>2, 'quantity'=>12, 'revenue'=>70),
+		  			array('date'=>'2013-10-22', 'product'=>'Bacon', 'category'=>'delicatessen', 'customer'=>5, 'quantity'=>10, 'revenue'=>60),
+		  			array('date'=>'2013-10-23', 'product'=>'Bacon', 'category'=>'delicatessen', 'customer'=>6, 'quantity'=>14, 'revenue'=>70),
+		  			array('date'=>'2013-10-24', 'product'=>'Bacon', 'category'=>'delicatessen', 'customer'=>3, 'quantity'=>15, 'revenue'=>80),
+		  			array('date'=>'2013-10-25', 'product'=>'Bacon', 'category'=>'delicatessen', 'customer'=>4, 'quantity'=>18, 'revenue'=>100),
 		  			
-		  			array('month'=>'Jan', 'city'=>'Berlin', 'temperature'=>-0.9),
-		  			array('month'=>'Feb', 'city'=>'Berlin', 'temperature'=>0.6),
-		  			array('month'=>'Mar', 'city'=>'Berlin', 'temperature'=>3.5),
-		  			array('month'=>'Apr', 'city'=>'Berlin', 'temperature'=>8.4),
-		  			array('month'=>'May', 'city'=>'Berlin', 'temperature'=>13.5),
-		  			array('month'=>'Jun', 'city'=>'Berlin', 'temperature'=>17.0),
-		  			array('month'=>'Jul', 'city'=>'Berlin', 'temperature'=>18.6),
-		  			array('month'=>'Aug', 'city'=>'Berlin', 'temperature'=>17.9),
-		  			array('month'=>'Sep', 'city'=>'Berlin', 'temperature'=>14.3),
-		  			array('month'=>'Oct', 'city'=>'Berlin', 'temperature'=>9.0),
-		  			array('month'=>'Nov', 'city'=>'Berlin', 'temperature'=>3.9),
-		  			array('month'=>'Dec', 'city'=>'Berlin', 'temperature'=>1.0)
-		  		);
-                
+		  			array('date'=>'2013-10-21', 'product'=>'Sausage', 'category'=>'delicatessen','customer'=>4,  'quantity'=>8, 'revenue'=>20),
+		  			array('date'=>'2013-10-22', 'product'=>'Sausage', 'category'=>'delicatessen', 'customer'=>3, 'quantity'=>5, 'revenue'=>16),
+		  			array('date'=>'2013-10-24', 'product'=>'Sausage', 'category'=>'delicatessen', 'customer'=>2, 'quantity'=>8, 'revenue'=>20),
+		  			
+		  			array('date'=>'2013-10-20', 'product'=>'Tuna', 'category'=>'canned food', 'customer'=>6, 'quantity'=>12, 'revenue'=>80),
+		  			array('date'=>'2013-10-21', 'product'=>'Tuna', 'category'=>'canned food','customer'=>8,  'quantity'=>13, 'revenue'=>100),
+		  			array('date'=>'2013-10-22', 'product'=>'Tuna', 'category'=>'canned food', 'customer'=>2, 'quantity'=>14, 'revenue'=>110),
+		  			array('date'=>'2013-10-23', 'product'=>'Tuna', 'category'=>'canned food', 'customer'=>4, 'quantity'=>15, 'revenue'=>110),
+		  			array('date'=>'2013-10-24', 'product'=>'Tuna', 'category'=>'canned food', 'customer'=>2, 'quantity'=>16, 'revenue'=>150),
+		  			array('date'=>'2013-10-25', 'product'=>'Tuna', 'category'=>'canned food', 'customer'=>5, 'quantity'=>19, 'revenue'=>180)
+);	
+     
 echo json_encode($dataArray);
 ?>
 
@@ -58,62 +44,51 @@ echo json_encode($dataArray);
 
 USAGE EXAMPLES:
 =================================================
-```<html>
+```html
+<html>
 
 <body>
 
-TEST
-<div id='container1'></div>
+<div id='container1'></div> <!-- chart will be created by calling the name eg: $('#container').drawchart()-->
+<div id='container2'></div>
+<div id='container3'></div>
+<div id='container4'></div>
+<div id='container5'></div>
+<div id='container6'></div>
 
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
+
+<script src="http://code.highcharts.com/highcharts-more.js"></script> <!-- for bubble charts only-->
+
 <script src='jsontohighchart.js'></script>
-<script>
-    
-$('#container1').drawchart({
-		URL: 'testserver.php', // server that return JSON
-		
-		category: 'month',  //category variable (x axis label), use date field name for time series 
-		seriesname: 'city', //series name variable
-		variable: 'temperature',  //data variable 
-		label: 'Temperature (°C)', //label for variable　(optional)
-		
-		stack: 'normal',  //'normal', 'percent' or  null
-		type: 'column',
-		title: 'column chart by category', 
-		decimal : 0,   // decimal point
-		
-			
-		HCoptions: {
-			//Highcharts Options here
-			xAxis: {
-				labels: {
-					rotation: 90,
-					y: 20
-				}
-			}
-	
-		}
-});
-</script>
+
+<!-- call chart drawing function -->
+<script></script>
+
 </html>
 ```
-
+```javascript
+   
+   
+//simple column chart   
 $('#container1').drawchart({
 		URL: 'testserver.php', // server that return JSON
 		
-		category: 'campaignid',  //category variable (x axis label), use date field name for time series 
-		seriesname: 'mediacat', //series name variable
-		variable: 'cost',  //data variable 
-		label: 'コスト', //label for variable　(optional)
+		category: 'category',  //category variable (x axis label), use date field name for time series 
+		seriesname: 'product', //series name variable
+		variable: 'revenue',  //data variable 
+		label: 'Revenue ($)', //label for variable　(optional)
 		
 		stack: 'normal',  //'normal', 'percent' or  null
-		type: 'column',
+		type: 'column', //column, line, bar or an array of column/line combination ['column', 'line']
 		title: 'column chart by category', 
+		
 		decimal : 0,   // decimal point
 		
-			
+		datatable: 'yes'  // to display a data table below the chart
+		
 		HCoptions: {
 			//Highcharts Options here
 			xAxis: {
@@ -122,40 +97,40 @@ $('#container1').drawchart({
 					y: 20
 				}
 			}
-	
 		}
 });
 
+
+//daily data
 $('#container2').drawchart({
 		URL: 'testserver.php', // server that return JSON
 		
-		category: 'reportdate',  //category variable (x axis label), use date field name for time series 
-		seriesname: 'campaignid', //series name variable
-		variable: ['install','cost'],  //data variable 
-		label: ['インストール','コスト'],
+		category: 'date',  //category variable (x axis label), use date field name for time series 
+		seriesname: 'product', //series name variable
+		variable: ['quantity','revenue'],  //data variable 
+		label: ['Sold Qty','Revenue($)'],
 
 		stack: 'normal',  //'normal', 'percent' or  null
 		type: ['column', 'line'],
 		title: 'time series', 
 		decimal : 0,   // decimal point
 		
-		ymin: [5000,0],
+		ymin: [0,50],  //starting point for 1st and 2nd Y axis
 		
 		xaxistype: 'datetime',  //datetime, category
-		interval: 'daily',   //for time series chart
+		interval: 'daily',   //for time series chart  only daily is available now
 		mindate: '2013-10-20', //yyyy-mm-dd
 		maxdate: '2013-10-25',
 		
 		
 });
 
-
-
+//pie chart
 $('#container3').drawchart({
 		URL: 'testserver.php', // server that return JSON
 		
-		category: 'campaignid',  //category variable (x axis label), use date field name for time series 
-		variable: 'cost',  //data variable 
+		category: 'category',  //category variable (x axis label), use date field name for time series 
+		variable: 'revenue',  //data variable 
 		
 		type: 'pie',
 		title: 'pie chart', 
@@ -171,13 +146,13 @@ $('#container3').drawchart({
 		}
 });
 
-
+//scatter chart
 $('#container4').drawchart({
 		URL: 'testserver.php', // server that return JSON
 		
-		category: 'mediacat',  //category variable (x axis label), use date field name for time series 
-		variable: ['cost', 'install'],  //data variable ,  x, y
-		label: ['コスト','インストール'],
+		category: 'product',  
+		variable: ['quantity', 'revenue'],  //data variable ,  x, y
+		label: ['Sold Qty','Revenue($)'],
 		
 		type: 'scatter',
 		title: 'scatter chart', 
@@ -188,12 +163,12 @@ $('#container4').drawchart({
 		
 });
 
-
+//scattered chart with size indication of z
 $('#container5').drawchart({
 		URL: 'testserver.php', // server that return JSON
 		
-		category: 'mediacat',  //category variable (x axis label), use date field name for time series 
-		variable: ['install', 'cost', 'newreg'],  //data variable  x, y, z
+		category: 'product',  //category variable (x axis label)
+		variable: ['quantity', 'revenue', 'customer'],  //data variable  x, y, z
 		
 		type: 'scatter',
 		title: 'Scatter bubble chart', 
@@ -202,19 +177,14 @@ $('#container5').drawchart({
 });
 
 
+//bubble chart , require highchart-more.js
 $('#container6').drawchart({
 		URL: 'testserver.php', // server that return JSON
 		
-		category: 'mediacat',  //category variable (x axis label), use date field name for time series 
-		//seriesname: 'campaignid', //series name variable
-		variable: ['install', 'cost', 'newreg'],  //data variable  x, y, z
-		label: ['インストール','コスト','新規登録'],
-		//variable: 'install',
+		category: 'product',  //category variable (x axis label)
+		variable: ['quantity', 'revenue', 'customer'],  //data variable  x, y, z
 		
 		type: 'bubble',
-		title: 'bubble chart', 
-		decimal :  0, // decimal point
-		ymin: [0,0],
-		datatable: 'yes'  // to display data table
-		
+		title: 'bubble chart'
 });
+```
